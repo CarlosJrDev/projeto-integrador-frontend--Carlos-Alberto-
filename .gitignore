@@ -1,0 +1,6 @@
+
+## Pasta Responsável pelas bibliotecas do projeto
+node_modules    
+
+## Arquivo Responsável por armazenar keys sensíveis
+.env
