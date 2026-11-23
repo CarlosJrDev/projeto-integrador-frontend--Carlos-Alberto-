@@ -11,13 +11,23 @@
 <body>
 
     <header id="cabecalho-principal">
-        <nav class="largura-pagina" aria-label="Navegação do catálogo">
-            <h1>E-commerce Show</h1>
+        <nav class="largura-pagina navegacao" aria-label="Navegação do catálogo">
+            <h1 class="marca">E-commerce Show</h1>
+            <button class="botao-menu" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-principal" disabled>
+                <span aria-hidden="true">☰</span>
+            </button>
 
-            <ul class="menu-categorias">
-                <li><a href="#perfume">Perfume</a></li>
-                <li><a href="#hidratante">Hidratante</a></li>
+            <ul class="menu-categorias" id="menu-principal">
+                <li><a href="index.html" class="ativo" aria-current="page">Início</a></li>
+                <li class="item-categorias">
+                    <a href="#destaques">Categorias</a>
+                    <ul class="submenu">
+                        <li><a href="#perfume">Perfume</a></li>
+                        <li><a href="#hidratante">Hidratante</a></li>
+                    </ul>
+                </li>
                 <li><a href="#como-usar">Como usar</a></li>
+                <li><a href="html/sobre.html">Sobre</a></li>
             </ul>
         </nav>
     </header>
@@ -28,7 +38,7 @@
             <p>Mostrar de Forma Digital Nossa Gama de Produtos!</p>
         </section>
 
-        <section class="painel">
+        <section class="painel" id="destaques">
             <h2>Destaques do catálogo</h2>
             <div class="grade-produtos">
                 <article class="cartao-produto" id="perfume">
