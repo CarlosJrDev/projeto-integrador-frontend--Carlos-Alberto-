@@ -1,0 +1,197 @@
+:root {
+    --fundo: #faf6f5;
+    --superficie: #fff;
+    --texto: #33262a;
+    --destaque: #6e3046;
+    --borda: #dcc6ce;
+    --suave: #f4e8eb;
+    --espaco: 1rem;
+    --raio: 0.5rem;
+}
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: system-ui, sans-serif;
+    /* O rem acompanha o tamanho de fonte configurado no navegador. */
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.35rem;
+    line-height: 1.3;
+}
+
+a:link {
+    color: var(--destaque);
+}
+
+a:visited {
+    color: #594477;
+}
+
+a:hover {
+    color: #482033;
+    text-decoration-thickness: 0.125rem;
+}
+
+a:active {
+    color: #862339;
+}
+
+:focus-visible {
+    outline: 0.125rem solid var(--destaque);
+    outline-offset: 0.125rem;
+}
+
+.largura-pagina {
+    width: calc(100% - 2 * var(--espaco));
+    max-width: 56rem;
+    margin-inline: auto;
+}
+
+#cabecalho-principal {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--borda);
+    background-color: var(--suave);
+}
+
+.menu-categorias {
+    margin: 0.75rem 0 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.menu-categorias li {
+    display: inline-block;
+    margin-right: var(--espaco);
+}
+
+.painel {
+    margin: var(--espaco) 0;
+    padding: var(--espaco);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    background-color: var(--superficie);
+}
+
+.introducao {
+    padding-block: 1.5rem;
+    background-color: var(--suave);
+}
+
+.introducao p {
+    margin: 0;
+}
+
+.tabela-rolavel {
+    overflow-x: auto;
+}
+
+#tabela-produtos {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-wrap: anywhere;
+}
+
+#tabela-produtos caption {
+    margin-bottom: 0.75rem;
+    text-align: left;
+    color: var(--destaque);
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+/* O descendente aplica o espaçamento só às células da tabela de produtos. */
+#tabela-produtos th,
+#tabela-produtos td {
+    padding: 0.5rem clamp(0.25rem, 1.5vw, 0.75rem);
+    border-bottom: 1px solid var(--borda);
+    text-align: left;
+}
+
+#tabela-produtos th {
+    background-color: var(--suave);
+}
+
+.foto-produto {
+    display: block;
+    width: clamp(2.5rem, 10vw, 5rem);
+    height: 5rem;
+    object-fit: contain;
+}
+
+.icone-estoque {
+    width: clamp(1.5rem, 5vw, 2.5rem);
+    height: auto;
+    vertical-align: middle;
+    color: var(--destaque);
+}
+
+.midia {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.formulario-avaliacao fieldset {
+    min-width: 0;
+    margin: 0 0 var(--espaco);
+    padding: 0.75rem;
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+}
+
+.formulario-avaliacao legend {
+    padding-inline: 0.25rem;
+    font-weight: 600;
+}
+
+.formulario-avaliacao label {
+    display: block;
+}
+
+.campo {
+    width: 100%;
+    max-width: 28rem;
+    margin: 0.25rem 0 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #927581;
+    border-radius: var(--raio);
+    color: inherit;
+    font: inherit;
+}
+
+.nota-avaliacao {
+    display: block;
+    width: 100%;
+    max-width: 18rem;
+    accent-color: var(--destaque);
+}
+
+.botao {
+    padding: 0.5rem var(--espaco);
+    border: 1px solid var(--destaque);
+    border-radius: var(--raio);
+    background-color: var(--destaque);
+    color: var(--superficie);
+    font: inherit;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: #482033;
+}
+
+.rodape {
+    padding-block: var(--espaco);
+    border-top: 1px solid var(--borda);
+}

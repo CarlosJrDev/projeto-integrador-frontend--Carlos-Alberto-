@@ -14,7 +14,8 @@ if (contexto) {
     const larguraMaxima = graficoEstoque.width - 24;
 
     graficoEstoque.height = Math.max(1, produtos.length) * alturaLinha + 16;
-    contexto.font = "16px sans-serif";
+    const fonte = getComputedStyle(graficoEstoque);
+    contexto.font = fonte.fontSize + " " + fonte.fontFamily;
 
     produtos.forEach((produto, indice) => {
         const topo = indice * alturaLinha + 16;

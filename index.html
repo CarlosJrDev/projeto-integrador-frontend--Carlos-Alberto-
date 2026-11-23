@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo de Produtos</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/estoque.js" defer></script>
 </head>
 <body>
 
-    <header>
-        <nav>
+    <header id="cabecalho-principal">
+        <nav class="largura-pagina">
              <h1>E-commerce Show</h1>
 
-            <ul>
+            <ul class="menu-categorias">
                 <li><a href="#">Perfume</a></li>
                 <li><a href="#">Hidratante</a></li>
                 <li><a href="#">Protetor Solar</a></li>
@@ -20,65 +22,65 @@
         </nav>       
     </header>
 
-    <main>
-        <section>
+    <main class="largura-pagina">
+        <section class="painel introducao">
             <h2>O que escolher hoje?</h2>
             <p>Mostrar de Forma Digital Nossa Gama de Produtos!</p>
         </section>
 
-        <section>
-            <table id="tabela-produtos">
-                <caption>Produtos disponíveis</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Quantidade</th>
-                        <th scope="col">Imagem</th>
-                        <th scope="col">Compra</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Perfume</td>
-                        <td>15</td>
-                        <td><img src="assets/images/perfume.jpg" alt="Perfume Masculino Black Carolina Herrera"></td>
-                        <td><a target="_blank" rel="noopener  noreferrer" href="https://www.amazon.com.br/Perfume-Masculino-Black-Carolina-Herrera/dp/B074Z9QH5F/ref=asc_df_B074Z9QH5F?tag=brbngshpdsk-20&linkCode=df0&hvadid=76828591707703&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=167266&hvtargid=pla-4580428019692046&psc=1&msclkid=b5bc863ba21c19523c87ecb0a7718471">Compre agora!</a></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Hidratante</td>
-                        <td>5</td>
-                        <td><img src="assets/images/hidratante.jpg" alt="Creme Hidratante CeraVe"></td>
-                        <td><a target="_blank" rel="noopener noreferrer" href="https://www.amazon.com.br/CeraVe-Creme-Hidratante-Pele-Extra/dp/B08GKXNVLW/ref=asc_df_B08GKXNVLW?tag=brbngshpdsk-20&linkCode=df0&hvadid=77240908719139&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=167266&hvtargid=pla-4580840338335778&msclkid=99e3b28e29ef168c1b42d8052fa948b4&th=1">Compre agora!</a></td>
-                    </tr>
-                </tbody>
-                
-
-            </table>
+        <section class="painel">
+            <div class="tabela-rolavel" role="region" aria-label="Tabela de produtos" tabindex="0">
+                <table id="tabela-produtos">
+                    <caption>Produtos disponíveis</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Quantidade</th>
+                            <th scope="col">Imagem</th>
+                            <th scope="col">Compra</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Perfume</td>
+                            <td>15</td>
+                            <td><img class="foto-produto" src="assets/images/perfume.jpg" alt="Perfume Masculino Black Carolina Herrera"></td>
+                            <td><a target="_blank" rel="noopener  noreferrer" href="https://www.amazon.com.br/Perfume-Masculino-Black-Carolina-Herrera/dp/B074Z9QH5F/ref=asc_df_B074Z9QH5F?tag=brbngshpdsk-20&linkCode=df0&hvadid=76828591707703&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=167266&hvtargid=pla-4580428019692046&psc=1&msclkid=b5bc863ba21c19523c87ecb0a7718471">Compre agora!</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Hidratante</td>
+                            <td>5</td>
+                            <td><img class="foto-produto" src="assets/images/hidratante.jpg" alt="Creme Hidratante CeraVe"></td>
+                            <td><a target="_blank" rel="noopener noreferrer" href="https://www.amazon.com.br/CeraVe-Creme-Hidratante-Pele-Extra/dp/B08GKXNVLW/ref=asc_df_B08GKXNVLW?tag=brbngshpdsk-20&linkCode=df0&hvadid=77240908719139&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=167266&hvtargid=pla-4580840338335778&msclkid=99e3b28e29ef168c1b42d8052fa948b4&th=1">Compre agora!</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             
         </section>
-        <section>
+        <section class="painel">
             <h2>
                 <!-- No Edge, o ícone permaneceu nítido ao reduzir e ampliar a largura da janela. -->
-                <svg viewBox="0 0 24 24" width="32" height="32" style="width: clamp(24px, 5vw, 40px); height: auto; vertical-align: middle;" role="img" aria-labelledby="icone-estoque-titulo">
+                <svg viewBox="0 0 24 24" width="32" height="32" class="icone-estoque" role="img" aria-labelledby="icone-estoque-titulo">
                     <title id="icone-estoque-titulo">Caixa de estoque</title>
                     <path d="M3 7l9-4 9 4v10l-9 4-9-4V7zm0 0l9 4 9-4m-9 4v10M7.5 5l9 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 Estoque por produto
             </h2>
-            <canvas id="grafico-estoque" width="360" height="120" style="max-width: 100%; height: auto;" role="img" aria-label="Gráfico de barras com as quantidades em estoque da tabela de produtos">
+            <canvas id="grafico-estoque" width="360" height="120" class="midia" role="img" aria-label="Gráfico de barras com as quantidades em estoque da tabela de produtos">
                 O gráfico compara a quantidade em estoque por produto. Consulte a coluna Quantidade da tabela para ver os valores.
             </canvas>
         </section>
 
-        <section>
+        <section class="painel">
             <h2>Como usar o catálogo</h2>
             <p>Confira o estoque na tabela, abra o link de compra do produto e use o formulário abaixo para avaliá-lo.</p>
             <!-- O vídeo é complementar. Com preload="none", o navegador pode esperar pelo play para carregar a mídia. -->
-            <video controls preload="none" poster="assets/media/guia-catalogo.jpg" width="480" style="max-width: 100%; height: auto;" aria-label="Como usar o catálogo">
+            <video controls preload="none" poster="assets/media/guia-catalogo.jpg" width="480" class="midia" aria-label="Como usar o catálogo">
                 <source src="assets/media/guia-catalogo.mp4" type='video/mp4; codecs="avc1.64001e"'>
                 <source src="assets/media/guia-catalogo.webm" type='video/webm; codecs="vp9"'>
                 <track kind="captions" src="assets/media/guia-catalogo.vtt" srclang="pt-BR" label="Português">
@@ -86,23 +88,24 @@
             </video>
         </section>
 
-        <section>
-            <form action="#" method="post">
+        <section class="painel">
+            <h2>Avalie um produto</h2>
+            <form class="formulario-avaliacao" action="#" method="post">
                 <fieldset>
                     <legend>Dados Pessoais</legend>
 
                     <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome" required>
+                    <input class="campo" type="text" name="nome" id="nome" required>
 
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required>
+                    <input class="campo" type="email" name="email" id="email" required>
                 </fieldset>
                 
                 <fieldset>
                     <legend>Dados do Produto</legend>
 
                     <label for="produto">Produto</label>
-                    <input type="text" name="produto" id="produto" required>
+                    <input class="campo" type="text" name="produto" id="produto" required>
                 </fieldset>
 
                 <fieldset>
@@ -110,6 +113,7 @@
 
                     <label for="avaliacao">Avalie de 1 a 5</label>
                     <input 
+                        class="nota-avaliacao"
                         type="range" 
                         name="avaliacao" 
                         id="avaliacao" 
@@ -120,12 +124,12 @@
                 </fieldset>
                 
 
-                <input type="submit" value="Enviar">
+                <input class="botao" type="submit" value="Enviar">
             </form>
         </section>
     </main>
 
-    <footer>
+    <footer class="rodape largura-pagina">
         <a href="html/sobre.html">Sobre</a>
     </footer>
     
