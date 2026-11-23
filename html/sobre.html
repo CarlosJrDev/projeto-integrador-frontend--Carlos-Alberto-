@@ -8,6 +8,28 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    <header id="cabecalho-principal">
+        <nav class="largura-pagina navegacao" aria-label="Navegação do catálogo">
+            <a class="marca" href="../index.html">E-commerce Show</a>
+            <button class="botao-menu" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-principal" disabled>
+                <span aria-hidden="true">☰</span>
+            </button>
+
+            <ul class="menu-categorias" id="menu-principal">
+                <li><a href="../index.html">Início</a></li>
+                <li class="item-categorias">
+                    <a href="../index.html#destaques">Categorias</a>
+                    <ul class="submenu">
+                        <li><a href="../index.html#perfume">Perfume</a></li>
+                        <li><a href="../index.html#hidratante">Hidratante</a></li>
+                    </ul>
+                </li>
+                <li><a href="../index.html#como-usar">Como usar</a></li>
+                <li><a href="sobre.html" class="ativo" aria-current="page">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <main class="largura-pagina">
         <section class="painel">
             <h1>Sobre o catálogo</h1>

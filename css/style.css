@@ -58,19 +58,44 @@ a:active {
     margin-inline: auto;
 }
 
+html {
+    scroll-padding-top: 5rem;
+}
+
 #cabecalho-principal {
-    padding: 1.5rem 0;
+    /* O sticky mantém a navegação visível e reserva o espaço inicial do cabeçalho. */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 0.75rem 0;
     border-bottom: 1px solid var(--borda);
     background-color: var(--suave);
+}
+
+.navegacao {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem var(--espaco);
+}
+
+.marca {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.menu-categorias,
+.submenu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 .menu-categorias {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem var(--espaco);
-    margin: 0.75rem 0 0;
-    padding-left: 0;
-    list-style-type: none;
+    gap: 0.25rem;
 }
 
 .menu-categorias a {
@@ -79,9 +104,87 @@ a:active {
     border-radius: var(--raio);
 }
 
+.menu-categorias a.ativo {
+    color: var(--destaque);
+    font-weight: 700;
+}
+
+.menu-categorias a.ativo,
 .menu-categorias a:hover,
 .menu-categorias a:focus-visible {
     background-color: var(--superficie);
+}
+
+.item-categorias {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 9rem;
+    padding: 0.25rem;
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    background-color: var(--superficie);
+}
+
+.item-categorias:hover > .submenu,
+.item-categorias:focus-within > .submenu {
+    display: block;
+}
+
+.submenu a:hover,
+.submenu a:focus-visible {
+    background-color: var(--suave);
+}
+
+.botao-menu {
+    display: none;
+    padding: 0.125rem 0.5rem;
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    background-color: var(--superficie);
+    color: var(--texto);
+    font: inherit;
+}
+
+@media (max-width: 40rem) {
+    html {
+        scroll-padding-top: 8rem;
+    }
+
+    .botao-menu {
+        display: block;
+    }
+
+    .menu-categorias {
+        flex-basis: 100%;
+    }
+}
+
+@media (hover: none) {
+    html {
+        scroll-padding-top: 11rem;
+    }
+
+    .menu-categorias {
+        align-items: flex-start;
+    }
+
+    .submenu,
+    .item-categorias:hover > .submenu,
+    .item-categorias:focus-within > .submenu {
+        display: flex;
+        flex-wrap: wrap;
+        position: static;
+        min-width: 0;
+        padding: 0 0 0 0.5rem;
+        border: 0;
+        background-color: transparent;
+    }
 }
 
 .painel {
