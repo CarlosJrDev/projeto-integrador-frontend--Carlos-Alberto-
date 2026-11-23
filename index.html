@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo de Produtos</title>
+    <script src="js/estoque.js" defer></script>
 </head>
 <body>
 
@@ -26,7 +27,7 @@
         </section>
 
         <section>
-            <table>
+            <table id="tabela-produtos">
                 <caption>Produtos disponíveis</caption>
                 <thead>
                     <tr>
@@ -59,6 +60,20 @@
 
             
         </section>
+        <section>
+            <h2>
+                <!-- No Edge, o ícone permaneceu nítido ao reduzir e ampliar a largura da janela. -->
+                <svg viewBox="0 0 24 24" width="32" height="32" style="width: clamp(24px, 5vw, 40px); height: auto; vertical-align: middle;" role="img" aria-labelledby="icone-estoque-titulo">
+                    <title id="icone-estoque-titulo">Caixa de estoque</title>
+                    <path d="M3 7l9-4 9 4v10l-9 4-9-4V7zm0 0l9 4 9-4m-9 4v10M7.5 5l9 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Estoque por produto
+            </h2>
+            <canvas id="grafico-estoque" width="360" height="120" style="max-width: 100%; height: auto;" role="img" aria-label="Gráfico de barras com as quantidades em estoque da tabela de produtos">
+                O gráfico compara a quantidade em estoque por produto. Consulte a coluna Quantidade da tabela para ver os valores.
+            </canvas>
+        </section>
+
         <section>
             <h2>Como usar o catálogo</h2>
             <p>Confira o estoque na tabela, abra o link de compra do produto e use o formulário abaixo para avaliá-lo.</p>
