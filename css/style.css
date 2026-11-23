@@ -151,20 +151,6 @@ html {
     font: inherit;
 }
 
-@media (max-width: 40rem) {
-    html {
-        scroll-padding-top: 8rem;
-    }
-
-    .botao-menu {
-        display: block;
-    }
-
-    .menu-categorias {
-        flex-basis: 100%;
-    }
-}
-
 @media (hover: none) {
     html {
         scroll-padding-top: 11rem;
@@ -182,6 +168,50 @@ html {
         position: static;
         min-width: 0;
         padding: 0 0 0 0.5rem;
+        border: 0;
+        background-color: transparent;
+    }
+}
+
+@media (max-width: 40rem) {
+    html {
+        scroll-padding-top: 11rem;
+    }
+
+    html:has(.botao-menu:not(:disabled)[aria-expanded="false"]) {
+        scroll-padding-top: 5rem;
+    }
+
+    .botao-menu:not(:disabled) {
+        display: block;
+        cursor: pointer;
+    }
+
+    .botao-menu:not(:disabled)[aria-expanded="false"] + .menu-categorias {
+        display: none;
+    }
+
+    .menu-categorias {
+        position: relative;
+        flex-basis: 100%;
+        column-gap: 0;
+        padding-bottom: 2.25rem;
+    }
+
+    .menu-categorias a {
+        padding-inline: 0.25rem;
+    }
+
+    .item-categorias {
+        position: static;
+    }
+
+    .menu-categorias .item-categorias > .submenu {
+        display: flex;
+        position: absolute;
+        inset: auto 0 0;
+        min-width: 0;
+        padding: 0;
         border: 0;
         background-color: transparent;
     }
@@ -339,9 +369,18 @@ html {
 .filtros-precos {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-end;
     gap: 0.5rem var(--espaco);
     margin-bottom: var(--espaco);
+}
+
+.filtros-precos .campo {
+    display: block;
+    margin-bottom: 0;
+}
+
+.filtros-precos .botao-secundario {
+    padding-block: 0.5rem;
 }
 
 .filtros-precos label,
@@ -423,6 +462,40 @@ html {
 .faixa-alta .faixa-preco {
     background-color: var(--suave);
     color: var(--destaque);
+}
+
+@media (max-width: 40rem) {
+    .filtros-precos > div {
+        flex: 1 1 9rem;
+    }
+
+    .lista-precos li {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas:
+            "nome preco"
+            "faixa acao";
+        align-items: center;
+    }
+
+    .nome-preco {
+        grid-area: nome;
+    }
+
+    .preco-final {
+        grid-area: preco;
+        justify-self: end;
+    }
+
+    .faixa-preco {
+        grid-area: faixa;
+        justify-self: start;
+    }
+
+    .lista-precos .botao-secundario {
+        grid-area: acao;
+        justify-self: end;
+    }
 }
 
 .rodape {
