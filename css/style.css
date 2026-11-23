@@ -336,6 +336,46 @@ html {
     background-color: #482033;
 }
 
+.lista-precos {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.lista-precos li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 0.75rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--borda);
+}
+
+.preco-final {
+    margin-inline-start: auto;
+}
+
+.faixa-preco {
+    display: inline-block;
+    padding: 0.125rem 0.375rem;
+    border-radius: var(--raio);
+}
+
+.faixa-economica .faixa-preco {
+    background-color: #e6f1e8;
+    color: #28533a;
+}
+
+.faixa-intermediaria .faixa-preco {
+    background-color: #f7ecd9;
+    color: #654625;
+}
+
+.faixa-alta .faixa-preco {
+    background-color: var(--suave);
+    color: var(--destaque);
+}
+
 .rodape {
     padding-block: var(--espaco);
     border-top: 1px solid var(--borda);
