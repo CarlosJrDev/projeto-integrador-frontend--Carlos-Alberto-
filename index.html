@@ -11,21 +11,39 @@
 <body>
 
     <header id="cabecalho-principal">
-        <nav class="largura-pagina">
-             <h1>E-commerce Show</h1>
+        <nav class="largura-pagina" aria-label="Navegação do catálogo">
+            <h1>E-commerce Show</h1>
 
             <ul class="menu-categorias">
-                <li><a href="#">Perfume</a></li>
-                <li><a href="#">Hidratante</a></li>
-                <li><a href="#">Protetor Solar</a></li>
+                <li><a href="#perfume">Perfume</a></li>
+                <li><a href="#hidratante">Hidratante</a></li>
+                <li><a href="#como-usar">Como usar</a></li>
             </ul>
-        </nav>       
+        </nav>
     </header>
 
     <main class="largura-pagina">
         <section class="painel introducao">
             <h2>O que escolher hoje?</h2>
             <p>Mostrar de Forma Digital Nossa Gama de Produtos!</p>
+        </section>
+
+        <section class="painel">
+            <h2>Destaques do catálogo</h2>
+            <div class="grade-produtos">
+                <article class="cartao-produto" id="perfume">
+                    <img class="imagem-destaque" src="assets/images/perfume.jpg" alt="">
+                    <h3>Perfume</h3>
+                    <p>212 VIP Black, de Carolina Herrera.</p>
+                    <a href="#estoque-perfume">Ver perfume na tabela</a>
+                </article>
+                <article class="cartao-produto" id="hidratante">
+                    <img class="imagem-destaque" src="assets/images/hidratante.jpg" alt="">
+                    <h3>Hidratante</h3>
+                    <p>Creme hidratante CeraVe.</p>
+                    <a href="#estoque-hidratante">Ver hidratante na tabela</a>
+                </article>
+            </div>
         </section>
 
         <section class="painel">
@@ -42,14 +60,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr id="estoque-perfume">
                             <td>1</td>
                             <td>Perfume</td>
                             <td>15</td>
                             <td><img class="foto-produto" src="assets/images/perfume.jpg" alt="Perfume Masculino Black Carolina Herrera"></td>
                             <td><a target="_blank" rel="noopener  noreferrer" href="https://www.amazon.com.br/Perfume-Masculino-Black-Carolina-Herrera/dp/B074Z9QH5F/ref=asc_df_B074Z9QH5F?tag=brbngshpdsk-20&linkCode=df0&hvadid=76828591707703&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=167266&hvtargid=pla-4580428019692046&psc=1&msclkid=b5bc863ba21c19523c87ecb0a7718471">Compre agora!</a></td>
                         </tr>
-                        <tr>
+                        <tr id="estoque-hidratante">
                             <td>2</td>
                             <td>Hidratante</td>
                             <td>5</td>
@@ -76,7 +94,7 @@
             </canvas>
         </section>
 
-        <section class="painel">
+        <section class="painel" id="como-usar">
             <h2>Como usar o catálogo</h2>
             <p>Confira o estoque na tabela, abra o link de compra do produto e use o formulário abaixo para avaliá-lo.</p>
             <!-- O vídeo é complementar. Com preload="none", o navegador pode esperar pelo play para carregar a mídia. -->

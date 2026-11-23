@@ -65,14 +65,23 @@ a:active {
 }
 
 .menu-categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem var(--espaco);
     margin: 0.75rem 0 0;
     padding-left: 0;
     list-style-type: none;
 }
 
-.menu-categorias li {
-    display: inline-block;
-    margin-right: var(--espaco);
+.menu-categorias a {
+    display: block;
+    padding: 0.375rem 0.5rem;
+    border-radius: var(--raio);
+}
+
+.menu-categorias a:hover,
+.menu-categorias a:focus-visible {
+    background-color: var(--superficie);
 }
 
 .painel {
@@ -90,6 +99,39 @@ a:active {
 
 .introducao p {
     margin: 0;
+}
+
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    gap: var(--espaco);
+}
+
+.cartao-produto {
+    padding: var(--espaco);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+}
+
+.cartao-produto:first-child h3 {
+    color: var(--destaque);
+}
+
+.cartao-produto h3 {
+    margin: 0.75rem 0 0.25rem;
+    font-size: 1.125rem;
+}
+
+.cartao-produto p {
+    margin: 0 0 0.75rem;
+}
+
+.imagem-destaque {
+    display: block;
+    width: 100%;
+    height: 7rem;
+    object-fit: contain;
+    object-position: left center;
 }
 
 .tabela-rolavel {
